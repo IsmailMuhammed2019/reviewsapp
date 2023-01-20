@@ -20,14 +20,14 @@ const checkNumber = (number) => {
  const nextButton = () => {
   setIndex((index) => {
    let newIndex = index + 1
-   return newIndex
+   return checkNumber(newIndex)
   })
  }
 
  const prevButton = () => {
   setIndex((index) => {
    let newIndex = index - 1
-   return newIndex
+   return checkNumber(newIndex)
   })
  }
   return (
