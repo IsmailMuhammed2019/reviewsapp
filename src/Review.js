@@ -32,8 +32,11 @@ const checkNumber = (number) => {
  }
 
  const randomSelect = () => {
-  let randomNumber = Math.floor(Math.random() * people.length)
-  setIndex(checkNumber(randomNumber))
+  let newIndex = Math.floor(Math.random() * people.length)
+  if (newIndex === index){
+    newIndex = index + 1
+  }
+  setIndex(checkNumber(newIndex))
  }
   return (
     <div className='review'>
