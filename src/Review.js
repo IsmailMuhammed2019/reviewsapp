@@ -30,6 +30,11 @@ const checkNumber = (number) => {
    return checkNumber(newIndex)
   })
  }
+
+ const randomSelect = () => {
+  let randomNumber = Math.floor(Math.random() * people.length)
+  setIndex(checkNumber(randomNumber))
+ }
   return (
     <div className='review'>
       <div className='img-container'>
@@ -49,7 +54,7 @@ const checkNumber = (number) => {
           <FaChevronRight />
         </button>
       </div>
-      <button className='random-btn'>Select Random</button>
+      <button className='random-btn' onClick={randomSelect}>Select Random</button>
     </div>
   )
 }
