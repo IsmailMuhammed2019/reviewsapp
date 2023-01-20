@@ -8,11 +8,11 @@ const Review = () => {
 
 
 const checkNumber = (number) => {
- if (number > 0){
-   return people.length - 1
+ if (number > people.length - 1){
+   return 0
  }
- if (people.length < 0){
-  return number + 1
+ if (number < 0){
+  return people.length - 1
  }
  return number
 }
