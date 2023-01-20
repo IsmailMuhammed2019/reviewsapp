@@ -6,6 +6,17 @@ const Review = () => {
  const [index, setIndex] = useState(0)
  const {image, name, text, job} = people[index]
 
+
+const checkNumber = (number) => {
+ if (number > 0){
+   return people.length - 1
+ }
+ if (people.length < 0){
+  return number + 1
+ }
+ return number
+}
+
  const nextButton = () => {
   setIndex((index) => {
    let newIndex = index + 1
